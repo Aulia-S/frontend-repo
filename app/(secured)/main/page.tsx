@@ -3,26 +3,11 @@
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
-import { Card, CardActions, CardContent, CardMedia, Modal, TextField } from '@mui/material'
+import { Card, CardActions, CardContent, CardMedia } from '@mui/material'
 import { useState } from 'react'
 import { useGetUserQuery } from '@/store/auth/services'
 import { User } from '@/types/User'
 import UserForm from '@/components/user/user-form'
-
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  boxShadow: 24,
-  p: 2,
-  borderRadius: 2,
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 2,
-}
 
 export default function Page() {
   const [open, setOpen] = useState(false)

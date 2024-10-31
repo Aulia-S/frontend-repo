@@ -16,7 +16,6 @@ export default function Auth() {
 
 export function CheckAuth() {
   const auth = useAuth()
-  const pathname = usePathname()
 
   if (!auth?.data?.user) {
     redirect('/')

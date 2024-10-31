@@ -7,11 +7,7 @@ import Typography from '@mui/material/Typography'
 import Stack from '@mui/material/Stack'
 import MuiCard from '@mui/material/Card'
 import { styled } from '@mui/material/styles'
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth'
-import { app } from '@/firebase.config'
 import { GoogleIcon } from '../custom-icons'
-import { setAuth } from '@/store/auth/authSlice'
-import { useAppDispatch } from '@/store/hooks'
 import { useAuth } from '@/store/auth/hooks'
 
 const Card = styled(MuiCard)(({ theme }) => ({
@@ -52,7 +48,7 @@ const LoginContainer = styled(Stack)(({ theme }) => ({
   },
 }))
 
-export default function Login(props: { disableCustomTheme?: boolean }) {
+export default function Login() {
   const auth = useAuth()
 
   return (
